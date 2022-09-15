@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
 
-function App() {
+import Splash from './components/Splash'
+import Home from './components/Home'
+import styles from './App.module.css'
+
+export default function App() {
+  const [splash, setSplash] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setSplash(false), 2500);
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      {splash && <Splash />}
+      {!splash && <>
+        <Home />
+        <div className={styles.footer}>
+          <h1>Talmage Bergeson</h1>
+          <span>
+            <p>Last updated Sept 2022</p>
+            <p>Feel free to check out this site's GitHub repo <a>here</a>.</p>
+          </span>
+        </div>
+      </>}
     </div>
-  );
+  )
 }
-
-export default App;

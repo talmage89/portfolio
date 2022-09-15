@@ -1,0 +1,48 @@
+.element {
+    width: 100%;
+    height: 100vh;
+    background-color: maroon;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+
+    animation: hideSplash 1s 1.5s 1 normal forwards;
+}
+@keyframes hideSplash {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.text {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.text::after {
+    width: 100%;
+    height: 3rem;
+    content: '';
+    background-color: maroon;
+    position: absolute;
+
+    animation: showText 1s forwards;
+}
+
+@keyframes showText {
+    100% {
+        width: 0;
+    }
+}

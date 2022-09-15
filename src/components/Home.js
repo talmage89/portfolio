@@ -10,9 +10,10 @@ import styles from './Home.module.css'
 import projects from '../data/projects';
 import skills from '../data/skills'
 
-//images
+//personal images, resume
 import aboutPhoto from '../img/personal/IMG_0543.jpeg';
 import avatarPhoto from '../img/personal/IMG_0001.jpg';
+import resume from '../img/personal/Talmage_Bergeson_Resume.pdf'
 
 
 export default function Home() {
@@ -36,9 +37,9 @@ export default function Home() {
             <div className={styles.navbar}>
                 <h1>Talmage Bergeson</h1>
                 <span className={styles.navButtons}>
-                    <button className={styles.navButton}>About me</button>
-                    <button className={styles.navButton}>Projects</button>
-                    <button className={`${styles.navButton} ${styles.contactButton}`} style={{ margin: "0" }}>Contact</button>
+                    <button className={styles.navButton} onClick={() => window.scroll({top: 525, behavior: "smooth"})}>About me</button>
+                    <button className={styles.navButton} onClick={() => window.scroll({top: 1450, behavior: "smooth"})}>Projects</button>
+                    <button className={styles.contactButtonInverse} onClick={() => window.scroll({top: 3550, behavior: "smooth"})} style={{ margin: "0", textTransform: "capitalize" }}>Contact</button>
                 </span>
             </div>
 
@@ -51,9 +52,9 @@ export default function Home() {
                 <h2 className={styles.introSubheader}>I envision projects, and <span className={styles.subheaderHighlight}>build them</span></h2>
                 <p className={styles.introDescription}>Web developer, problem solver, music maker, photo taker</p>
                 <div className={styles.introButtons}>
-                    <button className={styles.contactButton}>LinkedIn</button>
-                    <button className={styles.contactButton}>Github</button>
-                    <button className={styles.contactButton}>Instagram</button>
+                    <a className={styles.contactButton} href="https://www.linkedin.com/in/talmage-bergeson/" target="_blank" rel='noreferrer'>LinkedIn</a>
+                    <a className={styles.contactButton} href="https://github.com/talmage89" target="_blank" rel='noreferrer'>Github</a>
+                    <a className={styles.contactButton} href="https://www.instagram.com/_talmage/" target="_blank" rel='noreferrer'>Instagram</a>
                 </div>
             </div>
 
@@ -63,7 +64,7 @@ export default function Home() {
                     <p>Student at Mountainland Applied Technical College studying web programming and development.</p>
                     <p>Budding programmer with an unsatiated desire to learn new concepts, languages, and technologies.</p>
                     <p>I am driven by team environments where we tackle challenging issues. I love creating and building.</p>
-                    <button className={styles.aboutResumeLink} href="#">Download my resume</button>
+                    <a className={styles.aboutResumeLink} href={resume} download="Talmage_Bergeson_Resume">download my resume</a>
                 </div>
                 <img src={aboutPhoto} alt="A stunning young man looking for a web development job. Contact this human today using the 'contact' button on the top of the page." className={styles.aboutPhoto} />
             </div>
@@ -73,7 +74,7 @@ export default function Home() {
                     {skills.map((skill, index) => {
                         return (
                             <div className={skillsButtonStyle} key={index}>
-                                <img className={styles.skillsButtonImg} src={skill.img} alt={skill.name} height="25"/>
+                                <img className={styles.skillsButtonImg} src={skill.img} alt={skill.name} height={skill.height||"25px"} />
                                 <p className={styles.skillsButtonText}>{skill.name}</p>
                             </div>
                         )
@@ -97,7 +98,7 @@ export default function Home() {
                         />
                     )
                 })}
-                <span className={styles.centeringContainer}><button className={styles.seeMoreButton}>See More on Github</button></span>
+                <span className={styles.centeringContainer}><a className={styles.contactButtonInverse} href="https://github.com/talmage89" target="_blank" rel='noreferrer'>See More on Github</a></span>
             </div>
 
             <div className={styles.contact}>
@@ -111,9 +112,9 @@ export default function Home() {
                     </span>
                 </span>
                 <span className={styles.contactButtons}>
-                    <button className={styles.contactButton}><i class="fa-brands fa-linkedin-in"></i>LinkedIn</button>
-                    <button className={styles.contactButton}><i class="fa-brands fa-github"></i>Github</button>
-                    <button className={styles.contactButton}><i class="fa-brands fa-instagram"></i>Instagram</button>
+                    <a className={styles.contactButton} href="https://www.linkedin.com/in/talmage-bergeson/" target="_blank" rel='noreferrer'><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+                    <a className={styles.contactButton} href="https://github.com/talmage89" target="_blank" rel='noreferrer'><i class="fa-brands fa-github"></i>Github</a>
+                    <a className={styles.contactButton} href="https://www.instagram.com/_talmage/" target="_blank" rel='noreferrer'><i class="fa-brands fa-instagram"></i>Instagram</a>
                 </span>
             </div>
         </div>

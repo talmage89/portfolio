@@ -43,7 +43,8 @@ const skills = [
     },
     {
         name: "Ableton",
-        img: abletonPhoto
+        img: abletonPhoto,
+        height: "20px"
     }
 ];
 

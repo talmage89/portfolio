@@ -19,6 +19,17 @@
   align-items: center;
   justify-content: space-between;
 }
-.footer h1{
+.footer{
   color: white;
+}
+.footer span{
+  text-align: right;
+  line-height: .5rem;
+  font-size: .8rem;
+  font-weight: 100;
+}
+.footer span p a{
+
+  color: white;
+  font-weight: bold;
 }

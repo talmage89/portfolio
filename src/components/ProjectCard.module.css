@@ -42,14 +42,15 @@
 }
 
 .textTag::first-line {
-    box-shadow: inset 0px -10px 0px rgba(82, 82, 82, 0.237);
+    box-shadow: inset 0px -10px 0px rgba(128, 0, 0, 0.152);
 }
 
 .textGithub, .textLinkToSite{
     color: rgb(143, 0, 0);
     font-size: 1.6rem;
-    line-height: 8rem;
+    line-height: 6rem;
     margin: 0px 20px 0px 0px;
+
 }
 
 .elementImg {

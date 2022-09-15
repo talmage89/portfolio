@@ -63,12 +63,35 @@ h6 {
     background: white;
     border: none;
     color: maroon;
-    padding: 10px 30px;
     border-radius: 5px;
     font-weight: bold;
     font-size: .9rem;
-    margin-right: 20px;
+    margin-right: 50px;
+    position: relative;
 }
+.navButton::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background-color: maroon;
+    width: 0;
+    height: 3px;
+    top: 90%;
+    left: 0%;
+}
+.navButton:hover{
+    cursor: pointer;
+}
+.navButton:hover::after{
+    animation: underlineAnimation 0.3s forwards;
+}
+
+@keyframes underlineAnimation {
+    100% {
+        width: 100%;
+    }
+}
+
 
 /*  */
 /*  */
@@ -179,6 +202,7 @@ h6 {
     border-radius: 5px;
     font-weight: bold;
     font-size: .9rem;
+    text-decoration: none;
 
     transition: all .5s;
 
@@ -224,18 +248,21 @@ h6 {
     line-height: 1.3rem;
 }
 
-.aboutContent button {
+.aboutResumeLink {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     padding: 0;
-    margin: 30px 0px;
+    line-height: 80px;
     font-size: 1rem;
     color: maroon;
     font-weight: 900;
+    text-decoration: none;
+    display: block;
 }
 
-.aboutContent button::first-line {
-    box-shadow: inset 0px -10px 0px rgba(128, 0, 0, 0.111);
+.aboutResumeLink::first-line {
+    box-shadow: 
+    inset 0px -10px 0px rgba(128, 0, 0, 0.111);
 }
 
 .aboutPhoto {
@@ -416,20 +443,21 @@ h6 {
     justify-content: center;
 }
 
-.seeMoreButton {
+.contactButtonInverse {
     background-color: maroon;
     color: white;
     border: 2px solid maroon;
     border-radius: 5px;
-    padding: 15px 50px;
+    padding: 10px 50px;
     text-transform: uppercase;
     font-weight: bold;
-    margin: 30px 0px 50px 0px;
+
+    text-decoration: none;
 
     transition: all .5s;
 }
 
-.seeMoreButton:hover {
+.contactButtonInverse:hover {
     background-color: white;
     color: maroon;
     transform: scale(1.05);
@@ -443,9 +471,14 @@ h6 {
 /* contact */
 .contact {
     padding: 50px 0px;
-    margin: 0px 0px 50px 0px;
+    margin: 50px 0px;
     display: flex;
     flex-direction: column;
+}
+
+.contactHeader, .contactSubheader{
+    margin: 0;
+    line-height: 3rem;
 }
 
 .contactInfoCard {
@@ -457,8 +490,8 @@ h6 {
 }
 
 .infoCardPhoto {
-    height: 300px;
-    width: 300px;
+    height: 275px;
+    width: 275px;
     background-position: 0px 0px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -497,21 +530,10 @@ h6 {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 30px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 .contactButton i {
     font-size: 1.3rem;
     margin-right: 15px;
-}
-
-/*  */
-/*  */
-/*  */
-/*  */
-/* footer */
-.footer {
-    height: 100px;
-    width: 100%;
-    background-color: maroon;
 }

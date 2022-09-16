@@ -59,7 +59,7 @@ baby powder
     box-shadow: inset 0px -12px 0px #708b754e;
 }
 
-.textGithub, .textLinkToSite{
+.textGithub i, .textLinkToSite i{
     color: #708B75;
     font-size: 1.6rem;
     line-height: 6rem;

@@ -33,8 +33,8 @@ baby powder
   align-items: center;
   justify-content: space-between;
 }
-.footer{
-  color: white;
+.footer h1{
+  color: #FFFFFA;
 }
 .footer span{
   text-align: right;
@@ -42,8 +42,10 @@ baby powder
   font-size: .8rem;
   font-weight: 100;
 }
+.footer span p{
+  color: #FFFFFA;
+}
 .footer span p a{
-
-  color: white;
+  color: #FFFFFA;
   font-weight: bold;
 }

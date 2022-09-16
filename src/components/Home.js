@@ -38,9 +38,9 @@ export default function Home() {
                 <div className={styles.navbarWidthContainer}>
                     <h1>Talmage Bergeson</h1>
                     <span className={styles.navButtons}>
-                        <button className={styles.navButton} onClick={() => window.scroll({ top: 525, behavior: "smooth" })}>About me</button>
-                        <button className={styles.navButton} onClick={() => window.scroll({ top: 1450, behavior: "smooth" })}>Projects</button>
-                        <button className={styles.contactButtonInverse} onClick={() => window.scroll({ top: 3550, behavior: "smooth" })} style={{ margin: "0", textTransform: "capitalize" }}>Contact</button>
+                        <button className={styles.navButton} onClick={() => window.scroll({ top: 550, behavior: "smooth" })}>About me</button>
+                        <button className={styles.navButton} onClick={() => window.scroll({ top: 1600, behavior: "smooth" })}>Projects</button>
+                        <button className={styles.contactButtonInverse} onClick={() => window.scroll({ top: 3700, behavior: "smooth" })} style={{ margin: "0", textTransform: "capitalize" }}>Contact</button>
                     </span>
                 </div>
             </div>
@@ -64,11 +64,11 @@ export default function Home() {
                 <div className={styles.aboutContent}>
                     <h2 className={styles.aboutTitle}>About me</h2>
                     <p>Student at Mountainland Applied Technical College studying web programming and development.</p>
-                    <p>Budding programmer with an unsatiated desire to learn new concepts, languages, and technologies.</p>
-                    <p>I am driven by team environments where we tackle challenging issues. I love creating and building.</p>
-                    <a className={styles.aboutResumeLink} href={resume} download="Talmage_Bergeson_Resume">download my resume</a>
+                    <p>Budding programmer with an unsatiated desire to discover new concepts, languages, and technologies.</p>
+                    <p>I am driven by progress and results. I enjoy tackling seemingly insurmountable problems and projects. I love to design and to teach myself new concepts.</p>
+                    <a className={styles.aboutResumeLink} href={resume} download="Talmage_Bergeson_Resume">Download my resume</a>
                 </div>
-                <img src={aboutPhoto} alt="A stunning young man looking for a web development job. Contact this human today using the 'contact' button on the top of the page." className={styles.aboutPhoto} />
+                <img src={aboutPhoto} alt="A stunning young man looking for a web development job. Contact him today using the 'contact' button on the top of the page." className={styles.aboutPhoto} />
             </div>
             <div className={styles.skills}>
                 <div className={styles.skillsWidthContainer}>
@@ -110,7 +110,7 @@ export default function Home() {
             <div className={styles.contact}>
                 <div className={styles.contactWidthContainer}>
                 <h2 className={styles.contactHeader}>Contact</h2>
-                <p className={styles.contactSubheader}>If you have any questions about my work or would like to collaborate, please reach out.</p>
+                <p className={styles.contactSubheader}>If you have any questions or would like to collaborate with me, please reach out.</p>
                 <span className={styles.contactInfoCard}>
                     <div className={styles.infoCardPhoto} style={{ backgroundImage: `url(${avatarPhoto})` }} />
                     <span className={styles.infoCardTextContainer}>

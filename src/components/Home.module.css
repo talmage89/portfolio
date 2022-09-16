@@ -15,6 +15,7 @@ baby powder
 * {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
+    color: #080705;
 }
 
 h1,
@@ -54,6 +55,9 @@ h6 {
     justify-content: center;
     background-color: #FFFFFA;
     animation: showNavbarBackground .3s forwards;
+}
+.navbar h1{
+    color: #FFFFFA;
 }
 .navbarWidthContainer {
     box-sizing: border-box;
@@ -552,7 +556,7 @@ h6 {
     display: flex;
     justify-content: center;
     background: linear-gradient(to top right, transparent 80%, #708b7520 0),
-    linear-gradient(to bottom left, transparent 90%, #708b7520 0);
+    linear-gradient(to bottom left, transparent 70%, #708b7510 0);
 }
 .contactWidthContainer {
     max-width: 1050px;

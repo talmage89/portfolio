@@ -22,7 +22,7 @@ export default function Home() {
         triggerOnce: true
     }
     const [ref1, inView1] = useInView(intersectOptions);
-    const [ref2, inView2] = useInView({ ...intersectOptions, threshold: .5 });
+    const [ref2, inView2] = useInView({ ...intersectOptions, threshold: .8 });
     const [ref3, inView3] = useInView({ ...intersectOptions, threshold: 1 });
 
     const [skillsButtonStyle, setSkillButtonStyle] = useState(styles.skillsButton);

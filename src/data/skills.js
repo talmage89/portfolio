@@ -7,6 +7,9 @@ import gitPhoto from '../img/logos/git_logo.png'
 import figmaPhoto from '../img/logos/figma_logo.svg'
 import photoshopPhoto from '../img/logos/photoshop_logo.png'
 import abletonPhoto from '../img/logos/ableton_logo.png'
+import threejsPhoto from '../img/logos/threejs_logo.png'
+import blenderPhoto from '../img/logos/blender_logo.png'
+import awsPhoto from '../img/logos/aws_logo.png'
 
 const skills = [
     {
@@ -34,6 +37,18 @@ const skills = [
         img: gitPhoto
     },
     {
+        name: "AWS",
+        img: awsPhoto
+    },
+    {
+        name: "ThreeJS",
+        img: threejsPhoto
+    },
+    {
+        name: "Blender",
+        img: blenderPhoto
+    },
+    {
         name: "Figma",
         img: figmaPhoto
     },
@@ -45,7 +60,7 @@ const skills = [
         name: "Ableton",
         img: abletonPhoto,
         height: "20px"
-    }
+    },
 ];
 
 export default skills;

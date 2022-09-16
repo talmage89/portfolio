@@ -22,7 +22,7 @@ export default function Home() {
         triggerOnce: true
     }
     const [ref1, inView1] = useInView(intersectOptions);
-    const [ref2, inView2] = useInView({ ...intersectOptions, threshold: 1 });
+    const [ref2, inView2] = useInView({ ...intersectOptions, threshold: .5 });
     const [ref3, inView3] = useInView({ ...intersectOptions, threshold: 1 });
 
     const [skillsButtonStyle, setSkillButtonStyle] = useState(styles.skillsButton);
@@ -39,8 +39,8 @@ export default function Home() {
                     <h1>Talmage Bergeson</h1>
                     <span className={styles.navButtons}>
                         <button className={styles.navButton} onClick={() => window.scroll({ top: 550, behavior: "smooth" })}>About me</button>
-                        <button className={styles.navButton} onClick={() => window.scroll({ top: 1600, behavior: "smooth" })}>Projects</button>
-                        <button className={styles.contactButtonInverse} onClick={() => window.scroll({ top: 3700, behavior: "smooth" })} style={{ margin: "0", textTransform: "capitalize" }}>Contact</button>
+                        <button className={styles.navButton} onClick={() => window.scroll({ top: 1650, behavior: "smooth" })}>Projects</button>
+                        <button className={styles.contactButtonInverse} onClick={() => window.scroll({ top: 4220, behavior: "smooth" })} style={{ margin: "0", textTransform: "capitalize" }}>Contact</button>
                     </span>
                 </div>
             </div>
@@ -52,8 +52,8 @@ export default function Home() {
                         <p className={styles.introWavingHandEmoji}>👋</p>
                     </span>
                     <h1 className={styles.introHeader}>I'm a developer and an artist</h1>
-                    <h2 className={styles.introSubheader}>I find projects, and <span className={styles.subheaderHighlight}>build them</span></h2>
-                    <p className={styles.introDescription}>Web developer, problem solver, music maker, photo taker</p>
+                    <h2 className={styles.introSubheader}>I find web projects, and <span className={styles.subheaderHighlight}>build them</span></h2>
+                    <p className={styles.introDescription}>Web developer, problem solver, self-starter, music maker, photo taker</p>
                     <div className={styles.introButtons}>
                         <a className={styles.contactButton} href="https://www.linkedin.com/in/talmage-bergeson/" target="_blank" rel='noreferrer'>LinkedIn</a>
                         <a className={styles.contactButton} href="https://github.com/talmage89" target="_blank" rel='noreferrer'>Github</a>
@@ -66,7 +66,7 @@ export default function Home() {
                         <h2 className={styles.aboutTitle}>About me</h2>
                         <p>Student at Mountainland Applied Technical College studying web programming and development.</p>
                         <p>Budding programmer with an unsatiated desire to discover new concepts, languages, and technologies.</p>
-                        <p>I am driven by growth and results. I enjoy tackling seemingly insurmountable problems and projects. I love to design and to teach myself new concepts.</p>
+                        <p>I am driven by growth and results - I enjoy tackling seemingly insurmountable problems and projects. I love to design and to teach myself new concepts.</p>
                         <a className={styles.aboutResumeLink} href={resume} download="Talmage_Bergeson_Resume">Download my resume</a>
                     </div>
                     <img src={aboutPhoto} alt="A stunning young man looking for a web development job. Contact him today using the 'contact' button on the top of the page." className={styles.aboutPhoto} />
@@ -97,6 +97,7 @@ export default function Home() {
                             <ProjectCard
                                 key={index}
                                 completed={project.completed}
+                                title={project.title}
                                 description={project.description}
                                 tags={project.tags}
                                 github={project.github}

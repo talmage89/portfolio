@@ -1,13 +1,14 @@
 import timesheetAppImage from '../img/projects/TimesheetAppImage.png'
 import toDoAppImage from '../img/projects/ToDoAppImage.png'
 import userDatabaseImage from '../img/projects/UserDatabaseImage.png'
+import threejsDemoImage from '../img/projects/ThreeJSDemoImage.png'
 import pollywogGamesImage from '../img/projects/PollywogGamesImage.png'
 
 const projects = [
     {
         completed: "✅ Completed",
         title: "Timesheet App",
-        description: "HR Timesheet app for logging employees of various departments and their hours. This data is stored in the Firebase Firestore database.",
+        description: "HR Timesheet app for logging employees of various departments and their hours. This data is stored in a Firebase Firestore database.",
         tags: ['Angular', 'Firebase', 'Database'],
         github: "https://github.com/talmage89/Timesheet-App",
         linkToSite: "https://timesheet-app-83f91.web.app/analytics",
@@ -17,7 +18,7 @@ const projects = [
     {
         completed: "✅ Completed",
         title: "To-Do App",
-        description: "Advanced DOM manipulation demonstrated through a To-Do app using creation and removal of elements,  classes, contentEditable, and more.",
+        description: "Advanced DOM manipulation demonstrated through a To-Do app using creation and removal of elements, JavaScript animations, contentEditable entries, and more.",
         tags: ['JavaScript', 'HTML', 'CSS'],
         github: "https://github.com/talmage89/ToDo_App",
         linkToSite: "https://tbergeson.github.io/ToDo_App/",
@@ -27,20 +28,30 @@ const projects = [
     {
         completed: "✅ Completed",
         title: "User Database Frontend",
-        description: "Full CRUD functionality on a MongoDB created with a React frontend. This GUI uses Express to communicate with the database.",
+        description: "Full CRUD functionality for a MongoDB database with a React frontend. This GUI uses Express to communicate with the database.",
         tags: ['React', 'MongoDB', 'Express.js'],
         github: "https://github.com/talmage89/User-Database",
         img: userDatabaseImage,
         imgOnLeft: false
     },
     {
+        completed: "✅ Completed",
+        title: "ThreeJS App",
+        description: "Exploration with 3D assset rendering in the browser. The scene's camera position changes based on the user's scroll position.",
+        tags: ["ThreeJS", "JavaScript", "HTML"],
+        github: "https://github.com/talmage89/ThreeJSDemo2",
+        linkToSite: "https://talmage89.github.io/ThreeJSDemo2/",
+        img: threejsDemoImage,
+        imgOnLeft: true
+    }, 
+    {
         completed: "⏸ In Development",
         title: "Pollywog Games Website",
-        description: "Company website for Pollywog Games, the creators of Card Crusade and Barnard's Star on the App Store. Check their games out today!",
-        tags: ['Hugo', 'SASS'],
+        description: "I'm redoing the company website for Pollywog Games, creators of Card Crusade and Barnard's Star on the App Store. Check out their games today!",
+        tags: ['Hugo', 'SASS', 'HTML'],
         linkToSite: "https://pollywog.games/",
         img: pollywogGamesImage,
-        imgOnLeft: true
+        imgOnLeft: false
     }
 ]
 

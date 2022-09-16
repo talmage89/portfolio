@@ -1,5 +1,5 @@
-# Personal portfolio site
+# Portfolio
 
-Written in React, built with create-react-app.
+My personal website.
 
-Hosted with Firebase at [talmage-bergeson.com](https://talmage-bergeson.com/)
+Written in React, built with create-react-app. Hosted with Firebase at [talmage-bergeson.com](https://talmage-bergeson.com/)

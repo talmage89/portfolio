@@ -7,7 +7,7 @@ const projects = [
     {
         completed: "✅ Completed",
         title: "Timesheet App",
-        description: "HR Timesheet app for enter employees in various departments and their hours, stored in Firebase Firestore as a remote database.",
+        description: "HR Timesheet app for logging employees of various departments and their hours. This data is stored in the Firebase Firestore database.",
         tags: ['Angular', 'Firebase', 'Database'],
         github: "https://github.com/talmage89/Timesheet-App",
         linkToSite: "https://timesheet-app-83f91.web.app/analytics",

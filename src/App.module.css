@@ -1,3 +1,17 @@
+/* colors
+black
+#080705
+
+wine
+#702632
+
+xanadu
+#708B75
+
+baby powder
+#FFFFFA
+*/
+
 .app{
   position: relative;
   width: 100vw;
@@ -11,7 +25,7 @@
 .footer{
   height: 150px;
   width: 100%;
-  background-color: maroon;
+  background-color: #702632;
 
   box-sizing: border-box;
   padding: 0px 100px;

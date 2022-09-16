@@ -1,3 +1,17 @@
+/* colors
+black
+#080705
+
+wine
+#702632
+
+xanadu
+#708B75
+
+baby powder
+#FFFFFA
+*/
+
 .element {
     width: 100%;
     padding: 0px 0px 100px 0px;
@@ -42,11 +56,11 @@
 }
 
 .textTag::first-line {
-    box-shadow: inset 0px -10px 0px rgba(128, 0, 0, 0.152);
+    box-shadow: inset 0px -12px 0px #708b754e;
 }
 
 .textGithub, .textLinkToSite{
-    color: rgb(143, 0, 0);
+    color: #708B75;
     font-size: 1.6rem;
     line-height: 6rem;
     margin: 0px 20px 0px 0px;

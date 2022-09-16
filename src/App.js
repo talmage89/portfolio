@@ -1,18 +1,30 @@
+//packages
 import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
+//components
 import Splash from './components/Splash'
 import Home from './components/Home'
 import styles from './App.module.css'
 
 export default function App() {
   const [splash, setSplash] = useState(true);
+  const [animateSplash, setAnimateSplash] = useState(false);
+
+  const {ref, inView} = useInView({
+    threshold: .8,
+  })
+
   useEffect(() => {
-    setTimeout(() => setSplash(false), 2500);
-  }, [])
+    if (inView) {
+      setAnimateSplash(true);
+      setTimeout(() => setSplash(false), 2500);
+    }
+  }, [inView])
 
   return (
     <div className={styles.app}>
-      {splash && <Splash />}
+      {splash && <div ref={ref}><Splash shouldAnimate={animateSplash}/></div>}
       {!splash && <>
         <Home />
         <div className={styles.footer}>

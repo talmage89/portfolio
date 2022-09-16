@@ -1,3 +1,17 @@
+/* colors
+black
+#080705
+
+wine
+#702632
+
+xanadu
+#708B75
+
+baby powder
+#FFFFFA
+*/
+
 * {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
@@ -34,8 +48,21 @@ h6 {
 /*  */
 /*  */
 /* navbar */
-.navbar {
+.navbar{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFA;
+    animation: showNavbarBackground .3s forwards;
+}
+.navbarWidthContainer {
+    box-sizing: border-box;
+
     width: 100%;
+    max-width: 1050px;
+    padding: 20px 50px;
+    color: #FFFFFA;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,8 +71,6 @@ h6 {
     opacity: 0;
     animation: showNavbar .5s forwards;
 
-    margin: 0px 0px 30px 0px;
-    padding: 20px 0px;
 }
 
 @keyframes showNavbar {
@@ -54,35 +79,43 @@ h6 {
         opacity: 1;
     }
 }
+@keyframes showNavbarBackground{
+    100% {
+        background-color: #702632;
+    }
+}
 
 .navButtons {
     display: flex;
 }
 
 .navButton {
-    background: white;
+    background: rgba(255, 255, 255, 0);
     border: none;
-    color: maroon;
+    color: #FFFFFA;
     border-radius: 5px;
     font-weight: bold;
     font-size: .9rem;
     margin-right: 50px;
     position: relative;
 }
-.navButton::after{
+
+.navButton::after {
     content: '';
     display: inline-block;
     position: absolute;
-    background-color: maroon;
+    background-color: #FFFFFA;
     width: 0;
-    height: 3px;
+    height: 2px;
     top: 90%;
     left: 0%;
 }
-.navButton:hover{
+
+.navButton:hover {
     cursor: pointer;
 }
-.navButton:hover::after{
+
+.navButton:hover::after {
     animation: underlineAnimation 0.3s forwards;
 }
 
@@ -92,6 +125,27 @@ h6 {
     }
 }
 
+.contactButtonInverse {
+    background-color: #FFFFFA;
+    color: #080705;
+    border: 2px solid #FFFFFA;
+    border-radius: 20px;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: all .5s;
+}
+
+.contactButtonInverse:hover {
+    border: 2px solid #080705;
+    background-color: #080705;
+    color: #FFFFFA;
+    transform: scale(1.05);
+    cursor: pointer;
+}
 
 /*  */
 /*  */
@@ -101,7 +155,7 @@ h6 {
 .intro {
     width: 100%;
     padding: 20px 0px;
-
+    margin: 30px 0 0 0;
     transform: translateY(-20px);
     opacity: 0;
     animation: showIntro .5s .2s forwards;
@@ -165,7 +219,7 @@ h6 {
     font-weight: 700;
     font-size: 1.55rem;
     line-height: 3rem;
-    box-shadow: inset 0px -20px 0px rgba(107, 0, 0, 0.202)
+    box-shadow: inset 0px -20px 0px #708b755f
 }
 
 @keyframes showIntro {
@@ -194,9 +248,9 @@ h6 {
 }
 
 .contactButton {
-    background: white;
-    border: 2px solid maroon;
-    color: maroon;
+    background: #FFFFFA;
+    border: 2px solid #708B75;
+    color: #708B75;
     padding: 10px 30px;
     margin-right: 20px;
     border-radius: 5px;
@@ -212,8 +266,8 @@ h6 {
 }
 
 .contactButton:hover {
-    background-color: maroon;
-    color: white;
+    background-color: #708B75;
+    color: #FFFFFA;
     transform: scale(1.03);
     cursor: pointer;
 }
@@ -224,7 +278,9 @@ h6 {
 /*  */
 /* about */
 .about {
-    margin: 80px 0px;
+    margin: 40px 0px;
+    padding: 40px 0px;
+    position: relative;
     height: auto;
 
     display: flex;
@@ -246,6 +302,7 @@ h6 {
 
 .aboutContent p {
     line-height: 1.3rem;
+    margin: 2rem 0;
 }
 
 .aboutResumeLink {
@@ -254,15 +311,16 @@ h6 {
     padding: 0;
     line-height: 80px;
     font-size: 1rem;
-    color: maroon;
+    color: #708B75;
     font-weight: 900;
+    font-size: 1.2rem;
     text-decoration: none;
     display: block;
 }
 
 .aboutResumeLink::first-line {
-    box-shadow: 
-    inset 0px -10px 0px rgba(128, 0, 0, 0.111);
+    box-shadow:
+        inset 0px -15px 0px #708b7527;
 }
 
 .aboutPhoto {
@@ -316,16 +374,31 @@ h6 {
 /*  */
 /* skills */
 .skills {
+    padding: 50px 0px;
     margin: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #702632;
+}
+
+.skillsWidthContainer{
+    width: 100%;
+    max-width: 1050px;
+    padding: 0px 50px;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    box-sizing: border-box;
 }
 
 .skillsHeader {
-    padding: 50px 0px;
     opacity: 0;
     transition: all 1s;
+    color: #FFFFFA;
 }
 
 .skillsHeaderInView {
@@ -336,12 +409,12 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin: -10px;
+    margin: 50px -10px 20px -10px;
 }
 
 .skillsButton {
     width: 200px;
-    border: 2px solid black;
+    background-color: #FFFFFA;
     border-radius: 5px;
     padding: 10px 20px;
     margin: 10px;
@@ -358,10 +431,11 @@ h6 {
     animation: showSkillsButton .3s forwards;
 }
 
-.skillsButtonImg{
+.skillsButtonImg {
     margin: 0 10px 0 0;
 }
-.skillsButtonText{
+
+.skillsButtonText {
     margin: 0;
 }
 
@@ -423,8 +497,21 @@ h6 {
 /*  */
 /*  */
 /* projects */
-.projects {
-    padding: 80px 0px 50px 0px;
+.projects{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-image:
+        linear-gradient(to bottom right, transparent 80%, #708b7510 0),
+        linear-gradient(to top left, transparent 70%, #708b7510 0);
+}
+
+.projectsWidthContainer{
+    width: 100%;
+    max-width: 1050px;
+    box-sizing: border-box;
+
+    padding: 50px;
 }
 
 .projectHeader {
@@ -443,25 +530,16 @@ h6 {
     justify-content: center;
 }
 
-.contactButtonInverse {
-    background-color: maroon;
-    color: white;
-    border: 2px solid maroon;
+.projectSeeMoreButton{
+    background-color: #708B75;
     border-radius: 5px;
-    padding: 10px 50px;
-    text-transform: uppercase;
-    font-weight: bold;
-
-    text-decoration: none;
-
-    transition: all .5s;
+    color: #FFFFFA;
+    border: 2px solid #708B75
 }
-
-.contactButtonInverse:hover {
-    background-color: white;
-    color: maroon;
-    transform: scale(1.05);
-    cursor: pointer;
+.projectSeeMoreButton:hover{
+    border: 2px solid #708B75;
+    background-color: #FFFFFA;
+    color: #708B75;
 }
 
 /*  */
@@ -469,14 +547,24 @@ h6 {
 /*  */
 /*  */
 /* contact */
-.contact {
-    padding: 50px 0px;
+.contact{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to top right, transparent 80%, #708b7520 0),
+    linear-gradient(to bottom left, transparent 90%, #708b7520 0);
+}
+.contactWidthContainer {
+    max-width: 1050px;
+    padding: 50px 100px;
+    box-sizing: border-box;
     margin: 50px 0px;
     display: flex;
     flex-direction: column;
 }
 
-.contactHeader, .contactSubheader{
+.contactHeader,
+.contactSubheader {
     margin: 0;
     line-height: 3rem;
 }
@@ -508,7 +596,7 @@ h6 {
 }
 
 .infoCardPhoto:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .infoCardTextContainer {
@@ -523,7 +611,7 @@ h6 {
 }
 
 .infoCardTextEmail {
-    box-shadow: inset 0px -8px 0px rgba(128, 0, 0, 0.166);
+    box-shadow: inset 0px -8px 0px #708b7545;
 }
 
 .contactButtons {

@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './ProjectCard.module.css'
 import { useInView } from 'react-intersection-observer';
+import styles from './ProjectCard.module.css'
 
 export default function ProjectCard(props) {
     // react-intersection-observer
@@ -23,8 +23,8 @@ export default function ProjectCard(props) {
                     {props.tags.map((tag, index) => <p key={index} className={styles.textTag}>{tag}</p>)}
                 </span>
                 <span className={styles.textProjectLinks}>
-                    {props.github && <a className={styles.textGithub} href={props.github} target="_blank" rel='noreferrer'><i class="fa-brands fa-github"></i></a>}
-                    {props.linkToSite && <a className={styles.textLinkToSite} href={props.linkToSite} target="_blank" rel='noreferrer'><i class="fa-solid fa-link"></i></a>}
+                    {props.github && <a className={styles.textGithub} href={props.github} target="_blank" rel='noreferrer'><i className="fa-brands fa-github"></i></a>}
+                    {props.linkToSite && <a className={styles.textLinkToSite} href={props.linkToSite} target="_blank" rel='noreferrer'><i className="fa-solid fa-link"></i></a>}
                 </span>
             </div>
             {!props.imgOnLeft && <img className={inView ? `${styles.elementImg} ${styles.elementImgInView}` : styles.elementImg} src={props.img} alt="project" />}

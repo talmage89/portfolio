@@ -13,3 +13,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:not(i) {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  color: #080705;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+}

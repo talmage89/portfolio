@@ -1,9 +1,12 @@
+// Packages
 import React from 'react'
 import { useInView } from 'react-intersection-observer';
+
+// Styles
 import styles from './ProjectCard.module.css'
 
+
 export default function ProjectCard(props) {
-    // react-intersection-observer
     const { ref, inView } = useInView({
         threshold: 0.5,
         triggerOnce: true

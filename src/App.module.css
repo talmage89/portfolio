@@ -12,18 +12,139 @@ baby powder
 #FFFFFA
 */
 
-.app{
+.app {
   position: relative;
   width: 100vw;
   min-width: 650px;
   height: 100%;
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.footer{
+/*  */
+/*  */
+/* Navbar */
+.navbar {
+  width: 100vw;
+  min-width: 650px;
+  display: flex;
+  justify-content: center;
+  background-color: #FFFFFA;
+  animation: showNavbarBackground .3s forwards;
+}
+
+.navbar h1 {
+  color: #FFFFFA;
+}
+
+.navbarWidthContainer {
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: 1050px;
+  padding: 20px 100px;
+  color: #FFFFFA;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: showNavbar .5s forwards;
+
+}
+
+@keyframes showNavbar {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showNavbarBackground {
+  100% {
+    background-color: #702632;
+  }
+}
+
+.navButtons {
+  display: flex;
+}
+
+.navButton {
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  color: #FFFFFA;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: .9rem;
+  margin-right: 50px;
+  position: relative;
+}
+
+.navButton::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: #FFFFFA;
+  width: 0;
+  height: 2px;
+  top: 90%;
+  left: 0%;
+}
+
+.navButton:hover {
+  cursor: pointer;
+}
+
+.navButton:hover::after {
+  animation: underlineAnimation 0.3s forwards;
+}
+
+@keyframes underlineAnimation {
+  100% {
+    width: 100%;
+  }
+}
+
+.contactButtonInverse {
+  background-color: #FFFFFA;
+  color: #080705;
+  border: 2px solid #FFFFFA;
+  border-radius: 20px;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  text-decoration: none;
+
+  transition: all .5s;
+}
+
+.contactButtonInverse:hover {
+  border: 2px solid #080705;
+  background-color: #080705;
+  color: #FFFFFA;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+/*  */
+
+/*  */
+/*  */
+/* Outlet */
+.outletContainer{
+  flex-grow: 1;
+}
+
+/*  */
+/*  */
+/* Footer */
+.footer {
   height: 150px;
   width: 100%;
   background-color: #702632;
@@ -34,19 +155,24 @@ baby powder
   align-items: center;
   justify-content: space-between;
 }
-.footer h1{
+
+.footer h1 {
   color: #FFFFFA;
 }
-.footer span{
+
+.footer span {
   text-align: right;
   line-height: .5rem;
   font-size: .7rem;
   font-weight: 100;
 }
-.footer span p{
+
+.footer span p {
   color: #FFFFFA;
 }
-.footer span p a{
+
+.footer span p a {
   color: #FFFFFA;
   font-weight: bold;
 }
+/*  */

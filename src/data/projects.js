@@ -2,7 +2,6 @@ import timesheetAppImage from '../img/projects/TimesheetAppImage.png'
 import toDoAppImage from '../img/projects/ToDoAppImage.png'
 import userDatabaseImage from '../img/projects/UserDatabaseImage.png'
 import threejsDemoImage from '../img/projects/ThreeJSDemoImage.png'
-import pollywogGamesImage from '../img/projects/PollywogGamesImage.png'
 
 const projects = [
     {
@@ -43,15 +42,6 @@ const projects = [
         linkToSite: "https://talmage89.github.io/ThreeJSDemo2/",
         img: threejsDemoImage,
         imgOnLeft: true
-    }, 
-    {
-        completed: "⏸ In Development",
-        title: "Pollywog Games Website",
-        description: "I'm redoing the company website for Pollywog Games, creators of Card Crusade and Barnard's Star on the App Store. Check out their games today!",
-        tags: ['Hugo', 'SASS', 'HTML'],
-        linkToSite: "https://pollywog.games/",
-        img: pollywogGamesImage,
-        imgOnLeft: false
     }
 ]
 

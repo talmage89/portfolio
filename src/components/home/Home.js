@@ -8,7 +8,7 @@ import Contact from '../misc/Contact';
 // Styles
 import styles from './Home.module.css'
 
-// Data and files
+// Files
 import skills from '../../data/skills'
 import aboutPhoto from '../../img/personal/IMG_0543.jpeg';
 import resume from '../../img/personal/Talmage_Bergeson_Resume.pdf'

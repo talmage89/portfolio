@@ -18,7 +18,7 @@ baby powder
 /* main */
 .home {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1200px;
     min-width: 650px;
 
     height: 100%;
@@ -68,7 +68,7 @@ baby powder
 
 .intro {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1200px;
     min-width: 650px;
     padding: 40px 100px;
     box-sizing: border-box;
@@ -196,7 +196,7 @@ baby powder
 /* about */
 .about {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1200px;
     min-width: 650px;
     box-sizing: border-box;
 
@@ -313,7 +313,7 @@ baby powder
 
 .skillsWidthContainer {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1200px;
     min-width: 650px;
     padding: 0px 100px;
 
@@ -449,7 +449,7 @@ baby powder
 
 .projectsWidthContainer {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1200px;
     min-width: 650px;
     box-sizing: border-box;
 
@@ -499,7 +499,7 @@ baby powder
 }
 
 .contactWidthContainer {
-    max-width: 1050px;
+    max-width: 1200px;
     min-width: 650px;
     padding: 50px 0;
     box-sizing: border-box;

@@ -22,7 +22,7 @@
     "build": "git show -s --format=%ci > src/lastUpdated.txt && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm build && sudo firebase deploy"
+    "deploy": "npm run build && sudo firebase deploy"
   },
   "eslintConfig": {
     "extends": [

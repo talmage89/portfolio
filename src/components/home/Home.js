@@ -38,8 +38,8 @@ export default function Home() {
                         <p className={styles.introWavingHandEmoji}>👋</p>
                     </span>
                     <h1 className={styles.introHeader}>I'm a developer and an artist</h1>
-                    <h2 className={styles.introSubheader}>I find web projects, and <span className={styles.subheaderHighlight}>build them</span></h2>
-                    <p className={styles.introDescription}>Web developer, problem solver, self-starter, music maker, photo taker</p>
+                    <h2 className={styles.introSubheader}>I find web design problems and <span className={styles.subheaderHighlight}>solve them</span></h2>
+                    <p className={styles.introDescription}></p>
                     <div className={styles.introButtons}>
                         <a className={styles.contactButton} href="https://www.linkedin.com/in/talmage-bergeson/" target="_blank" rel='noreferrer'>LinkedIn</a>
                         <a className={styles.contactButton} href="https://github.com/talmage89" target="_blank" rel='noreferrer'>Github</a>

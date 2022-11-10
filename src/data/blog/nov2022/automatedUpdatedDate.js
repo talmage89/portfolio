@@ -1,4 +1,5 @@
 import footerDate from './automatedUpdatedDateImg/footer-date.png'
+import gitNotCommitted from './automatedUpdatedDateImg/git-not-committed.png'
 
 const post = {
   "_id": "0",
@@ -47,7 +48,8 @@ fetch(lastUpdatedTextFile)
     "This script now runs the git-show command and writes the output to the ITALIC{lastUpdated.txt} file before building.",
     "HEADER:Final thoughts",
     "I was happy that this feature was easy to implement. Right now, the Updated date only updates when I create a production build of the app. I might consider finding a way to update the file each time I commit to the Git repo. However, I mainly care about the accuracy of the date in the hosted version of this site, which requires a fresh production build before deployment.",
-    "Also, with this current implementation, building for production changes my local files. This means my local files are slightly ahead of the latest Git commit by the time the build is finished. It's unsatisfying to see my completely colorless repository files turn yellow after the build script runs. This means I have to commit my changes to the repo after running my build script. I will live."
+    "Also, with this current implementation, building for production changes my local files. This means my local files are slightly ahead of the latest Git commit by the time the build is finished. It's unsatisfying to see my completely colorless repository files turn yellow after the build script runs. This means I have to commit my changes to the repo after running my build script. I will live.",
+    `IMAGEURL:${gitNotCommitted}`
   ],
   "updated_date": "November 10th, 2022",
   "tags": ["Git", "NPM"]

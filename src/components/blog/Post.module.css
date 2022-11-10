@@ -1,0 +1,88 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.postHeaderContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.postHeaderContainer span{
+    display: flex;
+    align-items: center;
+}
+
+.postHeaderContainer::before {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 5%;
+    height: 1px;
+    bottom: -25px;
+}
+
+.backLink {
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.contentParagraph {
+    color: black;
+}
+
+.contentImg {
+    max-width: 600px;
+    border-radius: 5px;
+    margin: 60px 0;
+
+    box-shadow:
+        0.8px 0.8px 1.8px rgba(0, 0, 0, 0.028),
+        2px 2px 4.3px rgba(0, 0, 0, 0.04),
+        3.8px 3.8px 8px rgba(0, 0, 0, 0.05),
+        6.7px 6.7px 14.3px rgba(0, 0, 0, 0.06),
+        12.5px 12.5px 26.7px rgba(0, 0, 0, 0.072),
+        30px 30px 64px rgba(0, 0, 0, 0.1);
+
+}
+
+.contentHeader{
+    margin: 80px 0 40px 0;
+}
+
+.contentCode {
+    margin: 40px 0 60px 0;
+    padding: 30px 20px;
+    background: rgb(245, 245, 245);
+
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+
+    /* text overflow handling */
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.contentCode code {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.contentItalic{
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+}
+
+.postUpdatedDate{
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.485);
+    line-height: 0.1rem;
+}

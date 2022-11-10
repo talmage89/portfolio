@@ -18,13 +18,13 @@ export default function Projects() {
         triggerOnce: false
     }
     const [ref, inView] = useInView({ ...intersectOptions, threshold: 1 });
-    const [ref2, inView2] = useInView({ ...intersectOptions, threshold: 1 });
+    // const [ref2, inView2] = useInView({ ...intersectOptions, threshold: 1 });
 
     return (
         <>
             <div className={styles.projects}>
                 <div className={styles.projectsWidthContainer}>
-                    <h2 ref={ref} className={inView ? `${styles.projectHeader} ${styles.projectHeaderInView}` : styles.projectHeader}>Projects</h2>
+                    <h1 ref={ref} className={inView ? `${styles.projectHeader} ${styles.projectHeaderInView}` : styles.projectHeader}>Projects</h1>
                     {projects.map((project, index) => {
                         return (
                             <ProjectCard
@@ -43,20 +43,22 @@ export default function Projects() {
                     <span className={styles.centeringContainer}><a className={`${styles.contactButtonInverse} ${styles.projectSeeMoreButton}`} href="https://github.com/talmage89" target="_blank" rel='noreferrer'>See More on Github</a></span>
                 </div>
             </div>
-            <div className={styles.demos}>
-                <div className={styles.demosWidthContainer}>
-                    <h2 ref={ref2} className={inView2 ? `${styles.projectHeader} ${styles.projectHeaderInView}` : styles.projectHeader}>Demos</h2>
-                    
-                    {/* FILL WITH JAVASCRIPT DEMOS */}
-                    {/* UPDATE CSS ::BEFORE HEIGHT */}
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                </div>
-            </div>
         </>
     )
+
+    // CODE BELOW FOR USE IN RENDER ELEMENT
+
+    // <div className={styles.demos}>
+    // /* UPDATE CSS ::BEFORE HEIGHT */
+    //     <div className={styles.demosWidthContainer}>
+    //         <h2 ref={ref2} className={inView2 ? `${styles.projectHeader} ${styles.projectHeaderInView}` : styles.projectHeader}>Demos</h2>
+    //     /* FILL WITH JAVASCRIPT DEMOS */
+    //         <br />
+    //         <br />
+    //         <br />
+    //         <br />
+    //         <br />
+    //         <br />
+    //     </div>
+    // </div>
 }

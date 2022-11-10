@@ -41,10 +41,6 @@ export default function App() {
       setUpdatedDate(`${months[fullDate.getMonth()]} ${fullDate.getFullYear()}`);
     });
   
-  function lastUpdatedDate() {
-
-  }
-
   // render
   return (
     <div className={styles.app}>
@@ -70,7 +66,7 @@ export default function App() {
         <div className={styles.footer}>
           <h1>Talmage Bergeson</h1>
           <span>
-            {lastUpdatedDate()}
+            {updatedDate && <p>Updated {updatedDate}</p>}
             <p>Source code for this site may be viewed <a href='https://github.com/talmage89/portfolio' target="_blank" rel='noreferrer'>here</a></p>
             <p>Designed and developed by Talmage Bergeson</p>
           </span>

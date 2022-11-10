@@ -1,3 +1,20 @@
+/* colors
+black
+#080705
+
+wine
+#702632
+
+xanadu
+#708B75
+
+baby powder
+#FFFFFA
+*/
+
+/*  */
+/*  */
+/* Projects */
 .projects {
     width: 100vw;
     display: flex;
@@ -10,11 +27,11 @@
 
 .projectsWidthContainer {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1200px;
     min-width: 650px;
     box-sizing: border-box;
 
-    padding: 50px;
+    padding: 50px 100px;
 }
 
 .projectHeader {
@@ -60,6 +77,7 @@
     border-radius: 5px;
     color: #FFFFFA;
     border: 2px solid #708B75;
+    margin: 50px 0 100px 0;
 }
 
 .projectSeeMoreButton:hover {
@@ -68,6 +86,9 @@
     color: #708B75;
 }
 
+/*  */
+/*  */
+/* Demos */
 .demos {
     width: 100vw;
     display: flex;
@@ -90,9 +111,9 @@
 
 .demosWidthContainer {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1200px;
     min-width: 650px;
     box-sizing: border-box;
 
-    padding: 50px;
+    padding: 50px 100px;
 }

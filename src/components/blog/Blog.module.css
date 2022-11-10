@@ -1,0 +1,36 @@
+/* colors
+black
+#080705
+
+wine
+#702632
+
+xanadu
+#708B75
+
+baby powder
+#FFFFFA
+*/
+
+/*  */
+/*  */
+/* Blog */
+.blog{
+    width: 100vw;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: linear-gradient(300deg, transparent 60%, #708b7510 0);
+}
+
+.blogWidthContainer{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 650px;
+    box-sizing: border-box;
+
+    padding: 100px;
+}

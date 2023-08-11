@@ -1,0 +1,136 @@
+@import "src/scss/variables.scss";
+
+.ProjectCard {
+    gap: 100px;
+
+    &>img {
+        height: 250px;
+        border-radius: 5px;
+        box-shadow:
+            0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+            0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+            0px 12.5px 10px rgba(0, 0, 0, 0.035),
+            0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+            0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+            0px 100px 80px rgba(0, 0, 0, 0.07);
+    }
+
+    &>div {
+        gap: 20px;
+
+        &>.ProjectCard__tags {
+            gap: 16px;
+
+            &>.highlight-underlay {
+                font-size: 1rem;
+                font-weight: 400;
+
+                &::before {
+                    height: 12px;
+                }
+            }
+        }
+
+        &>.ProjectCard__links {
+
+        }
+    }
+}
+
+
+// /* colors
+// black
+// #080705
+
+// wine
+// #702632
+
+// xanadu
+// #708B75
+
+// baby powder
+// #FFFFFA
+// */
+
+// .element {
+//     width: 100%;
+
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+
+// .elementText {
+//     width: 50%;
+//     line-height: 1.15rem;
+
+//     opacity: 0;
+// }
+// .elementTextInView{
+//     animation: showElementText 1s forwards;
+// }
+// @keyframes showElementText {
+//     100% {
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+// }
+
+// .textCompleted {
+//     text-transform: uppercase;
+//     letter-spacing: .15rem;
+//     font-weight: 300;
+//     font-size: 0.8rem;
+// }
+
+// .textTags {
+//     width: 100%;
+//     display: flex;
+//     justify-content: flex-start;
+// }
+
+// .textTag {
+//     line-height: .5rem;
+//     padding-right: 20px;
+// }
+
+// .textTag::first-line {
+//     box-shadow: inset 0px -12px 0px #708b754e;
+// }
+
+// .textGithub i, .textLinkToSite i{
+//     color: #708B75;
+//     font-size: 1.6rem;
+//     line-height: 6rem;
+//     margin: 0px 20px 0px 0px;
+
+// }
+
+// .elementImg {
+//     transform: translateY(60px);
+//     opacity: 0;
+
+//     height: 350px;
+//     border-radius: 5px;
+//     box-shadow:
+//         0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+//         0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+//         0px 12.5px 10px rgba(0, 0, 0, 0.035),
+//         0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+//         0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+//         0px 100px 80px rgba(0, 0, 0, 0.07);
+// }
+// @media (max-width: 880px) {
+//     .elementImg{
+//         height: 250px;
+//     }
+// }
+// .elementImgInView{
+//     animation: showElementImage .8s forwards;
+// }
+// @keyframes showElementImage {
+//     100% {
+//         transform: translateY(0);
+//         opacity: 1;
+//     }
+// }

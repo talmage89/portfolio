@@ -1,0 +1,174 @@
+@import 'src/scss/variables.scss';
+
+.Home {
+  width: 100%;
+
+  &__intro {
+    width: 100%;
+    margin-top: 150px;
+
+    &>.pf-widthMonitor {
+      &>span {
+        &>:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+
+      &>:not(:first-child) {
+        margin-top: 30px;
+      }
+    }
+
+    &__highlightedText {
+      font-weight: 700;
+      font-size: 1.55rem;
+      line-height: 3rem;
+      box-shadow: inset 0px -20px 0px $green-30;
+    }
+  }
+
+  &__about {
+    width: 100%;
+    margin: 175px 0 200px 0;
+
+    &>.pf-widthMonitor {
+      &>div {
+
+        &>:not(:last-child) {
+          margin-bottom: 30px;
+        }
+
+        &>a {
+          font-size: 1.1rem;
+          text-decoration: none;
+          color: $forest-30;
+
+          &::before {
+            height: 10px;
+          }
+        }
+      }
+
+      &>img {
+        margin-left: 10%;
+        border-radius: 5px;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, .02), 0 6.7px 5.3px rgba(0, 0, 0, .028), 0 12.5px 10px rgba(0, 0, 0, .035), 0 22.3px 17.9px rgba(0, 0, 0, .042), 0 41.8px 33.4px rgba(0, 0, 0, .05), 0 100px 80px rgba(0, 0, 0, .07);
+        height: 350px;
+      }
+    }
+  }
+
+  &__skills {
+    width: 100%;
+    padding: 80px 0;
+    background-color: $red-100;
+
+    &>.pf-widthMonitor {
+      &>h3 {
+        color: $white;
+        margin-bottom: 80px;
+      }
+
+      &>div {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        grid-gap: 20px;
+
+        &>.Home__skills__skill {
+          padding: 10px 20px;
+          background-color: $white;
+          border-radius: 5px;
+
+          &>:not(:last-child) {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .app {
+//   position: relative;
+//   width: 100vw;
+//   min-width: 650px;
+//   height: 100%;
+//   min-height: 100vh;
+
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// .contactButtonInverse {
+//   background-color: #FFFFFA;
+//   color: #080705;
+//   border: 2px solid #FFFFFA;
+//   border-radius: 20px;
+//   padding: 10px 50px;
+//   text-transform: uppercase;
+//   font-weight: bold;
+
+//   text-decoration: none;
+
+//   transition: all .5s;
+// }
+
+// .contactButtonInverse:hover {
+//   border: 2px solid #080705;
+//   background-color: #080705;
+//   color: #FFFFFA;
+//   transform: scale(1.05);
+//   cursor: pointer;
+// }
+
+// /*  */
+
+// /*  */
+// /*  */
+// /* Outlet */
+// .outletContainer {
+//   flex-grow: 1;
+
+//   display: flex;
+//   flex-direction: column;
+
+//   box-sizing: border-box;
+// }
+
+// /*  */
+// /*  */
+// /* Footer */
+// .footer {
+//   height: 150px;
+//   width: 100%;
+//   background-color: #702632;
+
+//   box-sizing: border-box;
+//   padding: 0px 100px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .footer h1 {
+//   color: #FFFFFA;
+// }
+
+// .footer span {
+//   text-align: right;
+//   line-height: .5rem;
+//   font-size: .7rem;
+//   font-weight: 100;
+// }
+
+// .footer span p {
+//   color: #FFFFFA;
+// }
+
+// .footer span p a {
+//   color: #FFFFFA;
+//   font-weight: bold;
+// }
+
+// /*  */

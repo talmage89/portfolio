@@ -1,0 +1,125 @@
+@import 'src/scss/variables.scss';
+
+.Navbar {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $red-100;
+
+  h2,
+  a {
+    color: $white;
+  }
+
+  &>div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &>span {
+      display: flex;
+      align-items: center;
+
+      &>:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+
+
+// /*  */
+// /*  */
+// /* Navbar */
+// .Navbar {
+//   min-width: 650px;
+//   padding: 20px 100px;
+//   display: flex;
+//   justify-content: space-between;
+
+//   animation: showNavbarBackground .3s forwards;
+
+//   &>h1 {
+//     color: #FFFFFA;
+//   }
+
+
+// }
+
+// .navbarWidthContainer {
+//   width: 100%;
+//   max-width: 1200px;
+//   padding: 20px 100px;
+//   color: #FFFFFA;
+
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   transform: translateY(-20px);
+//   opacity: 0;
+//   animation: showNavbar .5s forwards;
+
+// }
+
+// @keyframes showNavbar {
+//   100% {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes showNavbarBackground {
+//   100% {
+//     background-color: #702632;
+//   }
+// }
+
+// .navButtons {
+//   display: flex;
+// }
+
+// .navButton {
+//   background: rgba(255, 255, 255, 0);
+//   border: none;
+//   color: #FFFFFA;
+//   border-radius: 5px;
+//   font-weight: bold;
+//   font-size: .9rem;
+//   margin-right: 30px;
+//   position: relative;
+// }
+
+// .navButton::after {
+//   content: '';
+//   display: inline-block;
+//   position: absolute;
+//   background-color: #FFFFFA;
+//   width: 0;
+//   height: 2px;
+//   top: 90%;
+//   left: 0%;
+// }
+
+// .navButton:hover {
+//   cursor: pointer;
+// }
+
+// .navButton:hover::after {
+//   animation: underlineAnimation 0.3s forwards;
+// }
+
+// @keyframes underlineAnimation {
+//   100% {
+//     width: 100%;
+//   }
+// }

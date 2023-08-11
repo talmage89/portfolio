@@ -1,0 +1,12 @@
+export * as AbletonLogo from "./ableton_logo.png";
+export * as AngularLogo from "./angular_logo.png";
+export * as AWSLogo from "./aws_logo.png";
+export * as BlenderLogo from "./blender_logo.png";
+export * as FigmaLogo from "./figma_logo.svg";
+export * as GitLogo from "./git_logo.png";
+export * as JavaScriptLogo from "./js_logo.png";
+export * as NodeJSLogo from "./nodejs_logo.png";
+export * as PhotoshopLogo from "./photoshop_logo.png";
+export * as ReactLogo from "./react_logo.png";
+export * as ThreeJSLogo from "./threejs_logo.png";
+export * as WebDesignLogo from "./webdesign_logo.png";

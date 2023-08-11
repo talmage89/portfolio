@@ -1,0 +1,8 @@
+@import 'src/scss/variables.scss';
+
+.pf-input, .pf-textarea {
+    padding: 8px 10px;
+    border: 2px solid $gray-40;
+    border-radius: 5px;
+    background-color: transparent;
+}

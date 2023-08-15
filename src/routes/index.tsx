@@ -12,10 +12,10 @@ const routes = [
     path: "/projects",
     element: <Projects />,
   },
-  {
-    path: "/contact",
-    element: <Contact />,
-  },
+  // {
+  //   path: "/contact",
+  //   element: <Contact />,
+  // },
   {
     path: "/*",
     element: <Navigate to="/" />,

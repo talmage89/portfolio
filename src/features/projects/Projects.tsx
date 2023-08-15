@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { BackgroundContainer, Button, WidthMonitor } from "~/src/ui";
 import { projects } from "~/src/assets/data";
 import colors from "~/src/scss/style.module.scss";
@@ -13,15 +14,19 @@ export const Projects = (props: ProjectsProps) => {
   const navigate = useNavigate();
 
   return (
-    <BackgroundContainer angle={300} percentage={75} color={colors.green10}>
-      <BackgroundContainer angle={120} percentage={85} color={colors.green10}>
+    <BackgroundContainer angle={300} percentage={60} color={colors.green10}>
+      <BackgroundContainer angle={120} percentage={90} color={colors.green10}>
         <div className="Projects flex-column-center">
-          <WidthMonitor className="flex-column">
+          <WidthMonitor>
             <span className="align-center">
-              <ArrowLeftIcon onClick={() => navigate(-1)} />
-              <h2>Projects</h2>
+              <FontAwesomeIcon
+                icon={faArrowLeft}
+                onClick={() => navigate(-1)}
+              />
+              <h2>Work</h2>
             </span>
-            <div>
+            <p>Check out some of the projects I've been working on recently.</p>
+            <div className="flex-column">
               {projects.map((project, index) => (
                 <ProjectCard
                   key={index}
@@ -44,12 +49,3 @@ export const Projects = (props: ProjectsProps) => {
     </BackgroundContainer>
   );
 };
-
-// <a
-//   className="contactButtonInverseprojectSeeMoreButton"
-//   href="https://github.com/talmage89"
-//   target="_blank"
-//   rel="noreferrer"
-// >
-//   See More on Github
-// </a>;

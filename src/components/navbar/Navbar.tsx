@@ -6,6 +6,10 @@ import "./Navbar.scss";
 type NavbarProps = {};
 
 export const Navbar = (props: NavbarProps) => {
+  function sendMail() {
+    window.location.href = "mailto:talmage.bergeson@gmail.com";
+  }
+
   return (
     <div className="Navbar">
       <WidthMonitor>
@@ -16,7 +20,8 @@ export const Navbar = (props: NavbarProps) => {
           <Button
             raised
             color="white"
-            link="/contact"
+            // link="/contact"
+            onClick={() => sendMail()}
             style={{ padding: "10px 40px", borderRadius: "20px" }}
           >
             Contact

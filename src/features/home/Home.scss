@@ -1,3 +1,4 @@
+@import 'src/scss/animations.scss';
 @import 'src/scss/variables.scss';
 
 .Home {
@@ -8,22 +9,35 @@
     margin-top: 150px;
 
     &>.pf-widthMonitor {
+
+      .Home__intro__emojiHand {
+        height: 40px;
+        display: inline-block;
+        animation: wave-animation 6s 1s infinite;
+      }
+
+      &>.Home__intro__actionText {
+        position: relative;
+
+        &>.highlight-underlay {
+          display: inline-block;
+          animation: fadeInUp10px 1s forwards;
+        }
+      }
+
       &>span {
         &>:not(:last-child) {
           margin-right: 20px;
+        }
+
+        & button:not(:hover) {
+          background-color: transparent;
         }
       }
 
       &>:not(:first-child) {
         margin-top: 30px;
       }
-    }
-
-    &__highlightedText {
-      font-weight: 700;
-      font-size: 1.55rem;
-      line-height: 3rem;
-      box-shadow: inset 0px -20px 0px $green-30;
     }
   }
 
@@ -71,13 +85,14 @@
 
       &>div {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 200px);
+        grid-template-columns: repeat(auto-fill, 235px);
         grid-gap: 20px;
 
         &>.Home__skills__skill {
           padding: 10px 20px;
           background-color: $white;
           border-radius: 5px;
+          cursor: pointer;
 
           &>:not(:last-child) {
             margin-right: 20px;

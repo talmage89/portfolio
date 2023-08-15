@@ -32,7 +32,12 @@
         }
 
         &>.ProjectCard__links {
+            gap: 1rem;
+            font-size: 2rem;
 
+            & > svg {
+                color: $green-10;
+            }
         }
     }
 }

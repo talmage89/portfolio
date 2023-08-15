@@ -3,64 +3,53 @@ import {
   AngularLogo,
   AWSLogo,
   BlenderLogo,
-  FigmaLogo,
-  GitLogo,
-  JavaScriptLogo,
-  NodeJSLogo,
-  PhotoshopLogo,
+  DjangoLogo,
+  DjangoRestLogo,
+  FlutterLogo,
+  GraphQLLogo,
+  ParcelLogo,
+  PremiereProLogo,
   ReactLogo,
   ThreeJSLogo,
-  WebDesignLogo,
+  TypeScriptLogo,
 } from "../../img";
 
-export const skills = [
+export type Skill = {
+  name: string;
+  img: string;
+  height?: string;
+  link: string;
+}
+
+export const skills: Skill[] = [
+  { name: "React", img: ReactLogo, link: "https://react.dev/" },
   {
-    name: "JavaScript",
-    img: JavaScriptLogo,
+    name: "TypeScript",
+    img: TypeScriptLogo,
+    link: "https://www.typescriptlang.org/",
   },
+  { name: "Angular", img: AngularLogo, link: "https://angular.io/" },
+  { name: "Flutter", img: FlutterLogo, link: "https://flutter.dev/" },
+  { name: "Django", img: DjangoLogo, link: "https://www.djangoproject.com/" },
   {
-    name: "React",
-    img: ReactLogo,
+    name: "Django Rest",
+    img: DjangoRestLogo,
+    link: "https://www.django-rest-framework.org/",
   },
+  { name: "AWS", img: AWSLogo, link: "https://aws.amazon.com/" },
+  { name: "Parcel", img: ParcelLogo, link: "https://parceljs.org/" },
+  { name: "GraphQL", img: GraphQLLogo, link: "https://graphql.org/" },
+  { name: "Three.js", img: ThreeJSLogo, link: "https://threejs.org/" },
+  { name: "Blender", img: BlenderLogo, link: "https://www.blender.org/" },
   {
-    name: "Angular",
-    img: AngularLogo,
-  },
-  {
-    name: "Node.JS",
-    img: NodeJSLogo,
-  },
-  {
-    name: "Web Design",
-    img: WebDesignLogo,
-  },
-  {
-    name: "Git",
-    img: GitLogo,
-  },
-  {
-    name: "AWS",
-    img: AWSLogo,
-  },
-  {
-    name: "ThreeJS",
-    img: ThreeJSLogo,
-  },
-  {
-    name: "Blender",
-    img: BlenderLogo,
-  },
-  {
-    name: "Figma",
-    img: FigmaLogo,
-  },
-  {
-    name: "Photoshop",
-    img: PhotoshopLogo,
-  },
-  {
-    name: "Ableton",
+    name: "Ableton Live",
     img: AbletonLogo,
     height: "20px",
+    link: "https://www.ableton.com/en/",
+  },
+  {
+    name: "Premiere Pro",
+    img: PremiereProLogo,
+    link: "https://www.adobe.com/products/premiere.html",
   },
 ];

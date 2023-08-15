@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BackgroundContainer, WidthMonitor, Button } from "~/src/ui";
-import avatarPhoto from "~/src/assets/img/personal/IMG_0001.jpg";
+import { img2029 } from "~/src/assets";
 import colors from "~/src/scss/style.module.scss";
 import "./ContactCard.scss";
 
@@ -11,6 +11,10 @@ type ContactCardProps = {
 
 export const ContactCard = (props: ContactCardProps = { title: true }) => {
   props = { title: true, background: true, ...props };
+
+  function openPage(url: string) {
+    window.open(url, "_blank");
+  }
 
   return (
     <BackgroundContainer
@@ -30,21 +34,28 @@ export const ContactCard = (props: ContactCardProps = { title: true }) => {
             </div>
           )}
           <span className="ContactCard__image flex-center">
-            <img src={avatarPhoto} />
+            <img src={img2029} />
             <span className="flex-column-center">
               <h4>Talmage Bergeson</h4>
               <p className="highlight-underlay">talmage.bergeson@gmail.com</p>
             </span>
           </span>
           <span className="ContactCard__buttons align-center">
-            <Button inverse raised>
+            <Button
+              inverse
+              raised
+              onClick={() =>
+                openPage("https://www.linkedin.com/in/talmage-bergeson/")
+              }
+            >
               LinkedIn
             </Button>
-            <Button inverse raised>
+            <Button
+              inverse
+              raised
+              onClick={() => openPage("https://github.com/talmage89")}
+            >
               Github
-            </Button>
-            <Button inverse raised>
-              Instagram
             </Button>
           </span>
         </WidthMonitor>

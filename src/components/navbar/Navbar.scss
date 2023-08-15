@@ -21,15 +21,34 @@
     &>span {
       display: flex;
       align-items: center;
-
-      &>:not(:last-child) {
-        margin-right: 30px;
-      }
+      gap: 50px;
 
       a {
         text-decoration: none;
         font-weight: 700;
         font-size: 0.9rem;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          background-color: #FFFFFA;
+          width: 0;
+          height: 2px;
+          top: 110%;
+          left: 0%;
+        }
+
+        &:hover::after {
+          animation: underlineAnimation 0.4s forwards;
+
+          @keyframes underlineAnimation {
+            100% {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
@@ -116,10 +135,4 @@
 
 // .navButton:hover::after {
 //   animation: underlineAnimation 0.3s forwards;
-// }
-
-// @keyframes underlineAnimation {
-//   100% {
-//     width: 100%;
-//   }
 // }

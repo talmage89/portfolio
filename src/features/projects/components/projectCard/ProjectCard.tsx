@@ -1,5 +1,8 @@
 import * as React from "react";
 import * as classnames from "classnames";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import "./ProjectCard.scss";
 
 type ProjectCardProps = {
@@ -40,7 +43,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
               target="_blank"
               rel="noreferrer"
             >
-              <i className="fa-brands fa-github"></i>
+              <FontAwesomeIcon icon={faGithub} />
             </a>
           )}
           {props.linkToSite && (
@@ -49,21 +52,12 @@ export const ProjectCard = (props: ProjectCardProps) => {
               href={props.linkToSite}
               target="_blank"
               rel="noreferrer"
-            ></a>
+            >
+              <FontAwesomeIcon icon={faLink} />
+            </a>
           )}
         </span>
       </div>
     </div>
   );
 };
-
-// props = {
-//     completed: string;
-//     title: string;
-//     description: string;
-//     tags: string[];
-//     github: link<string> | undefined;
-//     linkToSite: link<string> | undefined;
-//     img: link<string>;
-//     imgOnLeft: bool
-// }

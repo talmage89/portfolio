@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { BackgroundContainer, Button, Input, WidthMonitor } from "~/src/ui";
 import { ContactCard } from "./components";
 import "./Contact.scss";
@@ -32,7 +33,7 @@ export const Contact = (props: ContactProps) => {
       <div className="Contact flex-column-center">
         <WidthMonitor className="flex-column">
           <span className="align-center">
-            <ArrowLeftIcon onClick={() => navigate(-1)} />
+            <FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate(-1)} />
             <h2>Contact</h2>
           </span>
           <div className="Contact__form flex-column">
@@ -41,16 +42,16 @@ export const Contact = (props: ContactProps) => {
               <div className="flex">
                 <span>
                   <label>Name</label>
-                  <Input type="email" />
+                  <Input />
                 </span>
                 <span>
                   <label>Email</label>
-                  <Input></Input>
+                  <Input type="email" />
                 </span>
               </div>
               <span>
                 <label>Message</label>
-                <Input textarea></Input>
+                <Input textarea rows={8} />
               </span>
               <Button type="submit">Submit</Button>
             </form>

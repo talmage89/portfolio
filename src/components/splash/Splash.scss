@@ -1,0 +1,45 @@
+@import 'src/scss/variables.scss';
+
+.Splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $green-100;
+
+    &__text {
+        position: relative;
+
+        &>h2 {
+            color: $white;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $green-100;
+            animation: hideText 0.7s 0.4s forwards;
+
+            @keyframes hideText {
+                100% {
+                    left: 100%;
+                }
+            }
+        }
+    }
+
+    &--close {
+        animation: closeSplash 1.3s forwards;
+
+        @keyframes closeSplash {
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+}

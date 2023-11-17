@@ -1,22 +1,30 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import * as classnames from "classnames";
+import { Link, useLocation } from "react-router-dom";
 import { Button, WidthMonitor } from "../../ui";
 import "./Navbar.scss";
 
-type NavbarProps = {};
+export const Navbar = () => {
+  const location = useLocation();
+  const [skinny, setSkinny] = React.useState(location.pathname === "/demos");
 
-export const Navbar = (props: NavbarProps) => {
+  const getClassName = () =>
+    classnames("Navbar", {
+      "Navbar--small": skinny,
+    });
+
   function sendMail() {
     window.location.href = "mailto:talmage.bergeson@gmail.com";
   }
 
   return (
-    <div className="Navbar">
-      <WidthMonitor>
+    <div className={getClassName()}>
+      <WidthMonitor className={skinny ? "animateWidth" : undefined}>
         <h2>Talmage Bergeson</h2>
         <span>
-          <Link to="/">About</Link>
-          <Link to="/projects">Work</Link>
+          <Link to="/" onClick={() => setSkinny(false)}>About</Link>
+          <Link to="/work" onClick={() => setSkinny(false)}>Work</Link>
+          <Link to="/demos" onClick={() => setSkinny(true)}>Demos</Link>
           <Button
             raised
             color="white"

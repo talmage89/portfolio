@@ -1,0 +1,56 @@
+@import "src/scss/variables.scss";
+
+.Demos {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+
+  &__main {
+    align-self: stretch;
+    flex-grow: 1;
+    display: flex;
+  }
+
+  &__sidebar {
+    width: 300px;
+    align-self: stretch;
+    padding: 2rem 20px 2rem 0;
+    box-shadow: 0 16px 32px -16px rgba(0,0,0,.1),0 0 0 1px rgba(0,0,0,.1);
+    z-index: 1;
+
+    & > p {
+      text-transform: lowercase;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding-left: 20px;
+      margin-bottom: 0.5rem;
+    }
+
+    &__demolink {
+      padding: 12px 0 12px 20px;
+      border-radius: 0 20px 20px 0;
+      cursor: pointer;
+
+      & > p {
+        font-weight: bold;
+        color: $gray-60;
+      }
+
+      &:hover {
+        background-color: adjust-color($gray-10, $alpha: -0.7);
+      }
+
+      &--active {
+        background-color: $red-10;
+
+        & > p {
+          color: $red-80;
+        }
+
+        &:hover {
+          background-color: $red-10;
+        }
+      }
+    }
+  }
+}

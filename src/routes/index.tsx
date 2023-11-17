@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Navigate, useRoutes } from "react-router-dom";
-import { Home, Projects, Contact } from "~/src/features";
-import { Footer, Navbar } from "../components";
+import { Home, Projects, Demos } from "~/src/features";
+import { Navbar } from "../components";
 
 const routes = [
   {
@@ -9,13 +9,17 @@ const routes = [
     element: <Home />,
   },
   {
-    path: "/projects",
+    path: "/work",
     element: <Projects />,
   },
   // {
   //   path: "/contact",
   //   element: <Contact />,
   // },
+  {
+    path: "/demos",
+    element: <Demos />,
+  },
   {
     path: "/*",
     element: <Navigate to="/" />,
@@ -24,12 +28,12 @@ const routes = [
 
 export const AppRoutes = () => {
   const element = useRoutes(routes);
-
   return (
-    <div className="flex-column" style={{ minHeight: "100vh" }}>
+    <div
+      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+    >
       <Navbar />
-      <div style={{ flexGrow: "1" }}>{element}</div>
-      <Footer />
+      {element}
     </div>
   );
 };

@@ -1,0 +1,10 @@
+@import "src/scss/variables.scss";
+
+.ReactThreeFiber {
+    width: 100%;
+    height: 100%;
+
+    &__canvas {
+        background-color: black;
+    }
+}

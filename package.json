@@ -11,12 +11,14 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-three/fiber": "^8.15.11",
     "classnames": "^2.3.2",
     "cxs": "^6.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
     "reactflow": "^11.10.1",
+    "three": "^0.158.0",
     "zustand": "^4.4.6"
   },
   "devDependencies": {
@@ -27,6 +29,7 @@
     "@types/cxs": "^6.2.1",
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
+    "@types/three": "^0.158.2",
     "parcel": "^2.9.3",
     "postcss": "^8.4.27",
     "postcss-modules": "^4.3.1",

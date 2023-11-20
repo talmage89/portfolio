@@ -1,9 +1,12 @@
 import * as React from "react";
 import * as classnames from "classnames";
-import { ReactFlowDemo } from "./components";
+import { ReactFlowDemo, ReactThreeFiber } from "./components";
 import "./Demos.scss";
 
-const demos = [{ title: "React Flow", component: <ReactFlowDemo /> }];
+const demos = [
+  { title: "React Flow", component: <ReactFlowDemo /> },
+  { title: "React Three Fiber", component: <ReactThreeFiber /> },
+];
 
 export const Demos = () => {
   const [active, setActive] = React.useState(0);

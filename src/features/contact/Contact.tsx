@@ -1,44 +1,23 @@
-import * as React from "react";
 import { useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { ChevronLeft } from "lucide-react";
 import { BackgroundContainer, Button, Input, WidthMonitor } from "~/src/ui";
 import { ContactCard } from "./components";
 import "./Contact.scss";
 
-type ContactProps = {};
-
-type FormData = {
-  name: string;
-  email: string;
-  message: string;
-};
-
-const FormDataDefaults = {
-  name: "",
-  email: "",
-  message: "",
-};
-
-export const Contact = (props: ContactProps) => {
+export const Contact = () => {
   const navigate = useNavigate();
-  const [formData, setFormData] = React.useState<FormData>(FormDataDefaults);
-
-  const formSubmit = () => {
-    console.log("form submitted");
-  };
 
   return (
     <BackgroundContainer>
       <div className="Contact flex-column-center">
         <WidthMonitor className="flex-column">
           <span className="align-center">
-            <FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate(-1)} />
+            <ChevronLeft onClick={() => navigate(-1)} />
             <h2>Contact</h2>
           </span>
           <div className="Contact__form flex-column">
             <p>Fill out this form to contact me via email.</p>
-            <form className="flex-column" onSubmit={() => formSubmit()}>
+            <form className="flex-column">
               <div className="flex">
                 <span>
                   <label>Name</label>

@@ -4,26 +4,63 @@
   width: 100%;
   flex-grow: 1;
   display: flex;
+  position: relative;
 
   &__main {
     align-self: stretch;
     flex-grow: 1;
     display: flex;
+    overflow: hidden;
+
+    &__warning {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 1rem;
+      z-index: 101;
+      background-color: $white;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid $gray-10;
+      width: max-content;
+      max-width: calc(100vw - 2rem);
+      font-weight: bold;
+      box-shadow: 0 16px 32px -16px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(0, 0, 0, 0.1);
+
+      & > svg {
+        min-width: 24px;
+        min-height: 24px;
+      }
+    }
   }
 
   &__sidebar {
     width: 300px;
     align-self: stretch;
     padding: 2rem 20px 2rem 0;
-    box-shadow: 0 16px 32px -16px rgba(0,0,0,.1),0 0 0 1px rgba(0,0,0,.1);
+    box-shadow: 0 16px 32px -16px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(0, 0, 0, 0.1);
     z-index: 1;
 
-    & > p {
-      text-transform: lowercase;
-      font-weight: bold;
-      font-size: 1.2rem;
-      padding-left: 20px;
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       margin-bottom: 0.5rem;
+      padding-left: 20px;
+
+      & > p {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      & > svg {
+        cursor: pointer;
+      }
     }
 
     &__demolink {

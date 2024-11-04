@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
-import * as classnames from "classnames";
+import classnames from "classnames";
 import "./Button.scss";
 
 type ButtonColor = "primary" | "secondary" | "white";

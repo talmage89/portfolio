@@ -2,6 +2,7 @@ export * as AbletonLogo from "./ableton_logo.png";
 export * as AngularLogo from "./angular_logo.png";
 export * as AWSLogo from "./aws_logo.png";
 export * as BlenderLogo from "./blender_logo.png";
+export * as CPlusPlusLogo from "./c_plus_plus_logo.png";
 export * as DjangoLogo from "./django_logo.png";
 export * as DjangoRestLogo from "./django_rest_logo.png";
 export * as FlutterLogo from "./flutter_logo.png";

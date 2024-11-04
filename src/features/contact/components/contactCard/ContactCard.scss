@@ -1,46 +1,88 @@
-@import 'src/scss/variables.scss';
+@import "src/scss/variables.scss";
 
 .ContactCard {
-    width: 100%;
-    margin: 125px 0 125px 0;
+  width: 100%;
+  margin: 72px 0;
 
-    &>.pf-widthMonitor {
-      &>:not(:last-child) {
-        margin-bottom: 70px;
+  & > .pf-widthMonitor {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    & > div {
+      width: 100%;
+
+      & > :not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    & > .ContactCard__image {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+
+      & > img {
+        border-radius: 5px;
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+        height: 275px;
       }
 
-      &>div {
-        width: 100%;
+      & > span {
+        & > .highlight-underlay {
+          font-weight: 400;
 
-        &>:not(:last-child) {
-          margin-bottom: 10px;
-        }
-      }
+          &::before {
+            height: 8px;
+          }
 
-      &>.ContactCard__image {
-        &>img {
-          border-radius: 5px;
-          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, .02), 0 6.7px 5.3px rgba(0, 0, 0, .028), 0 12.5px 10px rgba(0, 0, 0, .035), 0 22.3px 17.9px rgba(0, 0, 0, .042), 0 41.8px 33.4px rgba(0, 0, 0, .05), 0 100px 80px rgba(0, 0, 0, .07);
-          height: 275px;
-        }
-
-        &>span {
-          margin-left: 100px;
-
-          &>.highlight-underlay {
-            font-weight: 400;
+          .ContactCard__tooltip {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            width: max-content;
 
             &::before {
-              height: 8px;
+              content: "";
+              position: absolute;
+              top: -6px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 0;
+              height: 0;
+              border-left: 6px solid transparent;
+              border-right: 6px solid transparent;
+              border-bottom: 6px solid #333;
             }
           }
         }
       }
+    }
 
-      &>.ContactCard__buttons {
-        &>:not(:last-child) {
-          margin-right: 20px;
-        }
+    & > .ContactCard__buttons {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ContactCard {
+    & > .pf-widthMonitor {
+      & > .ContactCard__image {
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
       }
     }
   }
+}

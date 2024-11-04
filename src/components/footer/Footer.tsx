@@ -1,13 +1,10 @@
-import * as React from "react";
 import "./Footer.scss";
 
-type FooterProps = {};
-
-export const Footer = (props: FooterProps) => {
+export const Footer = () => {
   return (
-    <div className="Footer flex-space-between">
+    <div className="Footer">
       <h2>Talmage Bergeson</h2>
-      <span>
+      <span className="Footer__text">
         <p>
           Source code for this site may be viewed{" "}
           <a

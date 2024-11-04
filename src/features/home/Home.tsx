@@ -2,9 +2,10 @@ import * as React from "react";
 import { ContactCard } from "../contact/";
 import { Footer } from "~/src/components";
 import { BackgroundContainer, Button, WidthMonitor } from "~/src/ui";
-import { skills, img2028, resume, emojiWaveHand } from "~/src/assets";
+import { skills, img2028, emojiWaveHand } from "~/src/assets";
 import colors from "~/src/scss/style.module.scss";
 import "./Home.scss";
+import { Link } from "react-router-dom";
 
 const introActions = [
   "build your website",
@@ -15,23 +16,12 @@ const introActions = [
 ];
 
 export const Home = () => {
-  // const [closeSplash, setCloseSplash] = React.useState(true);
-  // const [splash, setSplash] = React.useState<{
-  //   open: boolean;
-  //   animate: boolean;
-  // }>({ open: true, animate: false });
   const [introActionIndex, setIntroActionIndex] = React.useState(0);
-
-  // React.useEffect(() => {
-  //   setTimeout(() => setSplash((p) => ({ ...p, animate: true })), 1500);
-  //   setTimeout(() => setSplash((p) => ({ ...p, open: false })), 2500);
-  // }, []);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
       setIntroActionIndex((prev) => (prev + 1) % introActions.length);
     }, 7000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -82,27 +72,26 @@ export const Home = () => {
                 <h3 className="aboutTitle">About me</h3>
                 <p>
                   I'm a frontend developer at Start Studio, a software
-                  development team based in Utah. I work with React, Angular,
-                  and Flutter to build modern web applications.
+                  development team based in Utah. I work with React and Angular
+                  to build modern web applications.
                 </p>
                 <p>
-                  I'm constantly researching new topics and teaching myself some
-                  random skill to accomplish my goals. I'm currently learning
-                  about computer networking and studying for the CompTIA
-                  Network+ certification.
+                  I love to learn new things and am always looking for new
+                  opportunities to grow. I'm currently learning C++, computer
+                  graphics, and 3D modeling in my free time.
                 </p>
                 <p>
-                  I also consistently work on personal projects, which you can
-                  find on my Github. I build websites for others, work on games,
-                  and learn new coding languages.
+                  I consistently work on personal projects, which you can find
+                  on my Github. I build websites for others, work on games, and
+                  learn new coding languages.
                 </p>
-                <a
-                  href={resume}
+                <Link
+                  to={"/work"}
                   className="highlight-underlay"
-                  download="Talmage_Bergeson_resume"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 >
-                  Download my resume
-                </a>
+                  See my projects
+                </Link>
               </div>
               <img
                 src={img2028}
@@ -113,14 +102,7 @@ export const Home = () => {
         </BackgroundContainer>
         <div className="Home__skills flex-column-center">
           <WidthMonitor>
-            <h3
-              // ref={ref1}
-              className={
-                true ? `$"skillsHeader" $"skillsHeaderInView"` : "skillsHeader"
-              }
-            >
-              Interests and Skills
-            </h3>
+            <h3>Interests and Skills</h3>
             <div>
               {skills.map((skill, index) => (
                 <div

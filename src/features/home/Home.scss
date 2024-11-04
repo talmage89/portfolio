@@ -1,14 +1,17 @@
-@import 'src/scss/animations.scss';
-@import 'src/scss/variables.scss';
+@import "src/scss/animations.scss";
+@import "src/scss/variables.scss";
 
 .Home {
   width: 100%;
 
   &__intro {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 100px;
 
-    &>.pf-widthMonitor {
+    & > .pf-widthMonitor {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
 
       .Home__intro__emojiHand {
         height: 40px;
@@ -16,17 +19,19 @@
         animation: wave-animation 6s 1s infinite;
       }
 
-      &>.Home__intro__actionText {
+      & > .Home__intro__actionText {
         position: relative;
 
-        &>.highlight-underlay {
+        & > .highlight-underlay {
           display: inline-block;
           animation: fadeInUp10px 1s forwards;
         }
       }
 
-      &>span {
-        &>:not(:last-child) {
+      & > span {
+        margin-top: 1rem;
+
+        & > :not(:last-child) {
           margin-right: 20px;
         }
 
@@ -34,25 +39,20 @@
           background-color: transparent;
         }
       }
-
-      &>:not(:first-child) {
-        margin-top: 30px;
-      }
     }
   }
 
   &__about {
     width: 100%;
-    margin: 175px 0 200px 0;
+    margin: 100px 0 72px;
 
-    &>.pf-widthMonitor {
-      &>div {
-
-        &>:not(:last-child) {
+    & > .pf-widthMonitor {
+      & > div {
+        & > :not(:last-child) {
           margin-bottom: 30px;
         }
 
-        &>a {
+        & > a {
           font-size: 1.1rem;
           text-decoration: none;
           color: $forest-30;
@@ -63,10 +63,13 @@
         }
       }
 
-      &>img {
+      & > img {
         margin-left: 10%;
         border-radius: 5px;
-        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, .02), 0 6.7px 5.3px rgba(0, 0, 0, .028), 0 12.5px 10px rgba(0, 0, 0, .035), 0 22.3px 17.9px rgba(0, 0, 0, .042), 0 41.8px 33.4px rgba(0, 0, 0, .05), 0 100px 80px rgba(0, 0, 0, .07);
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
         height: 350px;
       }
     }
@@ -74,27 +77,27 @@
 
   &__skills {
     width: 100%;
-    padding: 80px 0;
+    padding: 3rem 0;
     background-color: $red-100;
 
-    &>.pf-widthMonitor {
-      &>h3 {
+    & > .pf-widthMonitor {
+      & > h3 {
         color: $white;
-        margin-bottom: 80px;
+        margin-bottom: 2rem;
       }
 
-      &>div {
+      & > div {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 235px);
+        grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
         grid-gap: 20px;
 
-        &>.Home__skills__skill {
+        & > .Home__skills__skill {
           padding: 10px 20px;
           background-color: $white;
           border-radius: 5px;
           cursor: pointer;
 
-          &>:not(:last-child) {
+          & > :not(:last-child) {
             margin-right: 20px;
           }
         }
@@ -103,87 +106,17 @@
   }
 }
 
-// .app {
-//   position: relative;
-//   width: 100vw;
-//   min-width: 650px;
-//   height: 100%;
-//   min-height: 100vh;
+@media (max-width: 1024px) {
+  .pf-widthMonitor {
+    width: 100%;
+    padding: 0 2rem;
+  }
 
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
-// .contactButtonInverse {
-//   background-color: #FFFFFA;
-//   color: #080705;
-//   border: 2px solid #FFFFFA;
-//   border-radius: 20px;
-//   padding: 10px 50px;
-//   text-transform: uppercase;
-//   font-weight: bold;
-
-//   text-decoration: none;
-
-//   transition: all .5s;
-// }
-
-// .contactButtonInverse:hover {
-//   border: 2px solid #080705;
-//   background-color: #080705;
-//   color: #FFFFFA;
-//   transform: scale(1.05);
-//   cursor: pointer;
-// }
-
-// /*  */
-
-// /*  */
-// /*  */
-// /* Outlet */
-// .outletContainer {
-//   flex-grow: 1;
-
-//   display: flex;
-//   flex-direction: column;
-
-//   box-sizing: border-box;
-// }
-
-// /*  */
-// /*  */
-// /* Footer */
-// .footer {
-//   height: 150px;
-//   width: 100%;
-//   background-color: #702632;
-
-//   box-sizing: border-box;
-//   padding: 0px 100px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
-
-// .footer h1 {
-//   color: #FFFFFA;
-// }
-
-// .footer span {
-//   text-align: right;
-//   line-height: .5rem;
-//   font-size: .7rem;
-//   font-weight: 100;
-// }
-
-// .footer span p {
-//   color: #FFFFFA;
-// }
-
-// .footer span p a {
-//   color: #FFFFFA;
-//   font-weight: bold;
-// }
-
-// /*  */
+  .Home__about {
+    & > .pf-widthMonitor {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

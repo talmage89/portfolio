@@ -1,4 +1,5 @@
-@import "src/scss/variables.scss";
+@use "sass:color";
+@use "src/scss/variables.scss" as *;
 
 .Demos {
   width: 100%;
@@ -74,7 +75,7 @@
       }
 
       &:hover {
-        background-color: adjust-color($gray-10, $alpha: -0.7);
+        background-color: color.adjust($gray-10, $alpha: -0.7);
       }
 
       &--active {

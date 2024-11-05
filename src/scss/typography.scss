@@ -1,4 +1,4 @@
-@import './variables.scss';
+@use "./variables.scss" as *;
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

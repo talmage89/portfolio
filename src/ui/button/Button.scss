@@ -1,58 +1,56 @@
-@import 'src/scss/variables.scss';
+@use "src/scss/variables.scss" as *;
 
 @mixin setColors($c1, $c2) {
-    --primary-color: #{$c1};
-    --secondary-color: #{$c2};
+  --primary-color: #{$c1};
+  --secondary-color: #{$c2};
 }
 
 @mixin colorIn($raised: false) {
-    color: var(--color1);
-    background-color: var(--color2);
+  color: var(--color1);
+  background-color: var(--color2);
 
-    @if $raised {
-        border: 2px solid var(--color2);
-    }
+  @if $raised {
+    border: 2px solid var(--color2);
+  } @else {
+    border: 2px solid var(--color1);
+  }
 
-    @else {
-        border: 2px solid var(--color1);
-    }
-
-    &:hover {
-        color: var(--color2);
-        background-color: var(--color1);
-        border: 2px solid var(--color1);
-    }
+  &:hover {
+    color: var(--color2);
+    background-color: var(--color1);
+    border: 2px solid var(--color1);
+  }
 }
 
 @mixin pfButtonColors {
-    @include setColors($green-100, $white);
+  --color1: var(--primary-color);
+  --color2: var(--secondary-color);
 
-    &--secondary {
-        @include setColors($red-100, $white);
-    }
+  @include setColors($green-100, $white);
+  @include colorIn();
 
-    &--white {
-        @include setColors($gray-100, $white)
-    }
+  &--secondary {
+    @include setColors($red-100, $white);
+  }
 
-    --color1: var(--primary-color);
-    --color2: var(--secondary-color);
+  &--white {
+    @include setColors($gray-100, $white);
+  }
 
-    &--inverse {
-        --color1: var(--secondary-color);
-        --color2: var(--primary-color);
-    }
+  &--inverse {
+    --color1: var(--secondary-color);
+    --color2: var(--primary-color);
+  }
 
-    @include colorIn();
-
-    &--raised {
-        @include colorIn(true);
-    }
+  &--raised {
+    @include colorIn(true);
+  }
 }
 
 .pf-button {
-    @include pfButtonColors;
-    
+  @include pfButtonColors;
+
+  & {
     padding: 10px 30px;
     border-radius: 5px;
     font-weight: bold;
@@ -61,11 +59,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
 
-    &:hover {
-        transform: scale(1.05);
-        cursor: pointer;
-    }
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 }
 
 // .contactButtonInverse {

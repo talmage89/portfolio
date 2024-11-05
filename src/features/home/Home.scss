@@ -1,5 +1,5 @@
-@import "src/scss/animations.scss";
-@import "src/scss/variables.scss";
+@use "src/scss/animations.scss" as *;
+@use "src/scss/variables.scss" as *;
 
 .Home {
   width: 100%;

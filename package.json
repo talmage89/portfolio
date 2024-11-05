@@ -4,7 +4,10 @@
   "source": "public/index.html",
   "scripts": {
     "start": "parcel",
-    "update:date": "git show -s --format=%ci > ./src/data/lastUpdated.txt"
+    "build": "rm -rf build && parcel build --dist-dir build",
+    "deploy": "npm run build && ssh portfolioServer 'rm -rf /var/www/portfolio/*' && scp -r build/* portfolioServer:/var/www/portfolio",
+    "prune": "rm -rf build && rm -rf dist && rm -rf .parcel-cache",
+    "nuke": "npm run prune && rm -rf node_modules && rm -rf package-lock.json"
   },
   "dependencies": {
     "@react-three/drei": "^9.115.0",
@@ -21,19 +24,18 @@
     "zustand": "^4.4.6"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.9.3",
-    "@parcel/transformer-inline-string": "^2.9.3",
-    "@parcel/transformer-sass": "^2.9.3",
-    "@parcel/transformer-svg-react": "^2.11.0",
-    "@parcel/transformer-webmanifest": "^2.9.3",
+    "@parcel/packager-raw-url": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
+    "@parcel/transformer-webmanifest": "^2.12.0",
     "@types/cxs": "^6.2.1",
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
     "@types/three": "^0.158.2",
-    "parcel": "^2.9.3",
-    "postcss": "^8.4.27",
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.47",
     "postcss-modules": "^4.3.1",
     "process": "^0.11.10",
+    "sass": "^1.80.6",
     "typescript": "^5.1.6"
   }
 }
